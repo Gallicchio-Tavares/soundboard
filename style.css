@@ -1,8 +1,69 @@
+/* Tema transgenero */
+body.theme-default {
+  --bg-color: #fafaee;
+  --primary-color: #FF90BB;
+  --accent-color: #FFC1DA;
+  --secondary-color: #8ACCD5;
+  --input-hover: #FFE4EE;
+  --text: #161618;
+  --file-input: #fff;
+}
+
+body.theme-gay {
+  --bg-color: #98E8C1;
+  --primary-color: #078D70;
+  --accent-color: #26CEAA;     
+  --secondary-color: #5049CC;
+  --input-hover: #7BADE2;
+  --text: #161618;
+  --file-input: #fff;
+}
+
+body.theme-asexual{
+  --bg-color: #161618;
+  --primary-color: #800080;
+  --accent-color: #c468c4;
+  --secondary-color: #a3a3a3;
+  --input-hover: #232324;
+  --text: #fff;
+  --file-input: #161618;
+}
+
+body.theme-bisexual{
+  --bg-color: #d19de6;
+  --primary-color: #D5006D;
+  --accent-color: #9B59B6;
+  --secondary-color: #2980B9;
+  --input-hover: #2980B9;
+  --text: #161618;
+  --file-input: #e8c2f7;
+}
+
+body.theme-lesbian{
+  --bg-color: #FF9A56;
+  --primary-color: #A30262;
+  --accent-color: #B55690;
+  --secondary-color: #D52D00;
+  --input-hover: #D162A4;
+  --text: #fff;
+  --file-input: #EF7627;
+}
+
+body.theme-aromantic{
+  --bg-color: #161618;
+  --primary-color: #A7D379;
+  --accent-color: #3DA542;
+  --secondary-color: #A9A9A9;
+  --input-hover: #232324;
+  --text: #fff;
+  --file-input: #161618;
+}
+
 body{
-    background-color: #F8F8E1;
+    background-color: var(--bg-color);
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 14px;
-    color: #161618;
+    color: var(--text);
 }
 
 #soundList {
@@ -12,13 +73,21 @@ body{
   padding: 20px;
 }
 
-
 #soundList button {
-    background-color: #FF90BB; /* rosa quente */
+  min-width: 130px;
+  min-height: 65px;
+  text-align: center;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button {
+    background-color: var(--primary-color);
     color: white;
     border: none;
     padding: 15px;
-    border-radius: 12px; /* cantos arredondados */
+    border-radius: 12px;
     font-size: 14px;
     font-weight: bold;
     cursor: pointer;
@@ -27,19 +96,19 @@ body{
     margin-bottom: 5%;
 }
   
-#soundList button:hover {
-    background-color: #FFC1DA; /* rosa claro no hover */
+button:hover {
+    background-color: var(--accent-color);
     transform: scale(1.05);
 }
 
 h1 {
   position: relative;
-  color: #FF90BB;
+  color: var(--primary-color);
   font-size: 2.8rem;
   font-weight: 800;
   text-align: center;
   margin: 30px 0 30px;
-  background: linear-gradient(90deg, #8ACCD5, #FF90BB, #FFC1DA);
+  background: linear-gradient(90deg, var(--secondary-color), var(--primary-color), var(--accent-color));
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -59,7 +128,7 @@ h1::after {
   width: 80px;
   height: 6px;
   margin: 12px auto 0;
-  background: #8ACCD5;
+  background: var(--secondary-color);
   border-radius: 3px;
   box-shadow: 0 2px 4px rgba(255, 144, 187, 0.3);
 }
@@ -69,15 +138,15 @@ h1::after {
     display: block;
     margin: 0 auto 20px auto;
     padding: 10px;
-    border: 2px dashed #FFC1DA; /* rosa claro */
-    background-color: #fff;
+    border: 2px dashed var(--accent-color);
+    background-color: var(--file-input);
     border-radius: 12px;
     cursor: pointer;
     width: 80%;
 }
 
 #fileInput:hover {
-    background-color: #FFE4EE; /* tom ainda mais clarinho ao passar o mouse */
+    background-color: var(--input-hover); /* tom ainda mais clarinho ao passar o mouse */
     transition: background-color 0.3s ease;
 }
 
@@ -86,7 +155,7 @@ input[type="range"] {
   -webkit-appearance: none;
   width: 100%;
   height: 8px;
-  background: linear-gradient(90deg, #8ACCD5, #FF90BB, #FFC1DA);
+  background: linear-gradient(90deg, var(--secondary-color), var(--primary-color), var(--accent-color));
   border-radius: 5px;
   outline: none;
   margin-top: 5px;
@@ -101,7 +170,7 @@ input[type="range"]::-webkit-slider-thumb {
   width: 20px;
   height: 20px;
   background: white;
-  border: 3px solid #8ACCD5;
+  border: 3px solid var(--secondary-color);
   border-radius: 50%;
   cursor: pointer;
   transition: border-color 0.3s, transform 0.2s;
@@ -117,7 +186,7 @@ input[type="range"]::-moz-range-thumb {
   width: 20px;
   height: 20px;
   background: white;
-  border: 3px solid #8ACCD5;
+  border: 3px solid var(--secondary-color);
   border-radius: 50%;
   cursor: pointer;
   transition: border-color 0.3s, transform 0.2s;
@@ -130,7 +199,7 @@ input[type="range"]::-moz-range-thumb:hover {
 
 input[type="range"]::-moz-range-track {
   height: 8px;
-  background: linear-gradient(90deg, #8ACCD5, #FF90BB, #FFC1DA);
+  background: linear-gradient(90deg, var(--secondary-color), var(--primary-color), var(--accent-color));
   border-radius: 5px;
 }
 
@@ -153,3 +222,68 @@ input[type="range"]::-moz-range-track {
     border-radius: 5px;
     text-align: center;
   }
+
+ /* The side navigation menu */
+ .sidenav {
+  height: 100%; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  left: 0;
+  background-color: var(--secondary-color); /* Black*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 60px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+/* The navigation menu links */
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: var(--bg-color);
+  display: block;
+  transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+  color: var(--primary-color);
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+  transition: margin-left .5s;
+  padding: 20px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+} 
+
+header{
+    color: white;
+    padding: 10px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+#open-nav{
+  position: absolute;
+  left: 20px;
+  top: 20px;
+}

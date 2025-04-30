@@ -145,3 +145,29 @@ fileInput.addEventListener('change', async (event) => {
   const sounds = await getAllSounds();
   sounds.forEach(createSoundItem);
 })();
+
+/* Set the width of the side navigation to 250px */
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+}
+
+/* Set the width of the side navigation to 0 */
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+} 
+
+document.querySelectorAll('.sidenav a[data-theme]').forEach(link => {
+  link.addEventListener('click', function (e) {
+    e.preventDefault();
+    const theme = this.getAttribute('data-theme');
+
+    // Remove temas antigos
+    document.body.classList.remove('theme-default', 'theme-gay', 'theme-asexual','theme-aromantic', 'theme-bisexual', 'theme-lesbian');
+
+    // Aplica o novo
+    document.body.classList.add('theme-' + theme);
+
+    // Fecha o menu
+    closeNav();
+  });
+});

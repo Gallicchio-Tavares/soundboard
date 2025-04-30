@@ -4,11 +4,26 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Soundboard</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="style.css">
   <link rel="icon" type="image/png" href="icons/icon.png">
 </head>
-<body>
-  <h1>Soundboard</h1>
+<body class="theme-default">
+  <header>
+    <h1>Soundboard</h1>
+    <button onclick="openNav()" id="open-nav"><i class="fa fa-cogs" aria-hidden="true"></i></button>
+  </header>
+
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="#" data-theme="default">Transgender</a>
+    <a href="#" data-theme="gay">Gay</a>
+    <a href="#" data-theme="asexual">Asexual</a>
+    <a href="#" data-theme="aromantic">Aromantic</a>
+    <a href="#" data-theme="bisexual">Bisexual</a>
+    <a href="#" data-theme="lesbian">Lesbian</a>
+  </div>
+  
   <div id="main-div">
     <input type="file" id="fileInput" accept=".mp3" multiple/>
     <div id="soundList"></div>
