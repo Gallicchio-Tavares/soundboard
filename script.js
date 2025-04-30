@@ -162,7 +162,7 @@ document.querySelectorAll('.sidenav a[data-theme]').forEach(link => {
     const theme = this.getAttribute('data-theme');
 
     // Remove temas antigos
-    document.body.classList.remove('theme-default', 'theme-gay', 'theme-asexual','theme-aromantic', 'theme-bisexual', 'theme-lesbian');
+    document.body.classList.remove('theme-default', 'theme-gay', 'theme-asexual','theme-aromantic', 'theme-bisexual', 'theme-lesbian', 'theme-enby');
 
     // Aplica o novo
     document.body.classList.add('theme-' + theme);

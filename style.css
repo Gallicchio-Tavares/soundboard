@@ -59,6 +59,16 @@ body.theme-aromantic{
   --file-input: #161618;
 }
 
+body.theme-enby{
+  --bg-color: #161618;
+  --primary-color: #9C59D1;
+  --accent-color: #FCF434;
+  --secondary-color: #FCF434;
+  --input-hover: #232324;
+  --text: #fff;
+  --file-input: #161618;
+}
+
 body{
     background-color: var(--bg-color);
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -71,6 +81,7 @@ body{
   grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
   gap: 15px;
   padding: 20px;
+  margin: 0 8%;
 }
 
 #soundList button {
